@@ -334,7 +334,7 @@ def main():
     from xbox360controller import Xbox360Controller
     from ruamel.yaml import YAML
 
-    cfg_abs_path = './../config/bp3_test.yaml'  # config file
+    cfg_abs_path = './../config/bp5_test.yaml'  # config file
     cfg = YAML().load(open(cfg_abs_path, 'r'))
     gg = GaitGenerator(cfg)
     xbox = Xbox360Controller(0, axis_threshold=0.2)
@@ -393,7 +393,7 @@ def main2():
     from ruamel.yaml import YAML
     import matplotlib.pyplot as plt
 
-    cfg_abs_path = './../config/bp4_test.yaml'  # config file
+    cfg_abs_path = './../config/bp5_test.yaml'  # config file
     cfg = YAML().load(open(cfg_abs_path, 'r'))
     command = np.array([0, 0, 0])
     gg = GaitGenerator(cfg)

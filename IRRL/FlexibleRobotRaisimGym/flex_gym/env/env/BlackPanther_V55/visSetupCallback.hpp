@@ -26,7 +26,7 @@
 #define _RAISIM_GYM_VISSETUPCALLBACK_HPP
 
 #include <raisim/OgreVis.hpp>
-
+#include <iostream>
 void setupCallback() {
     auto vis = raisim::OgreVis::get();
 
@@ -38,24 +38,24 @@ void setupCallback() {
     lightdir.normalise();
     vis->getLightNode()->setDirection({lightdir});
     vis->setCameraSpeed(300);
-
+    std::cout<<"!!!!!!!!!!" << vis->getResourceDir() << std::endl;
     /// load  textures
     vis->addResourceDirectory(vis->getResourceDir() + "/material/checkerboard");
     vis->loadMaterialFile("checkerboard.material");
 
     // set skybox
+    std::cout<<"!!!!!!!!!!" << vis->getResourceDir() + "/material/checkerboard"<< std::endl;
 
+    vis->addResourceDirectory(vis->getResourceDir() + "/material/skybox/violentdays");
 
-    vis->addResourceDirectory(vis->getResourceDir() + "/material/skybox/whitedays");
-
-    vis->loadMaterialFile("whitedays.material");
+    vis->loadMaterialFile("violentdays.material");
 
     Ogre::Quaternion quat;
     quat.FromAngleAxis(Ogre::Radian(1.57), {1., 0, 0});
 
-    vis->getSceneManager()->setSkyBox(true, "whitedays", 500, true, quat,
+    vis->getSceneManager()->setSkyBox(true, "skybox/violentdays", 500, true, quat,
                                       Ogre::ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
-
+    std::cout<<"!!!!!!!!!!" << vis->getResourceDir() + "/material/skybox/violentdays"<< std::endl;
 
     /// shdow setting
     vis->getSceneManager()->setShadowTechnique(Ogre::SHADOWTYPE_TEXTURE_ADDITIVE);

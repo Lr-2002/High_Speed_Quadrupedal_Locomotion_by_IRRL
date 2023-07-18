@@ -1,0 +1,40 @@
+/home/lr-2002/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/lr-2002/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/ninja/linux/ninja -G Ninja -S /home/lr-2002/code/High_Speed_Quadrupedal_Locomotion_by_IRRL/IRRL/FlexibleRobotRaisimGym -B /home/lr-2002/code/High_Speed_Quadrupedal_Locomotion_by_IRRL/IRRL/FlexibleRobotRaisimGym/cmake-build-debug
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.6") 
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+-- Performing Test HAS_FLTO
+-- Performing Test HAS_FLTO - Success
+-- Found pybind11: /home/lr-2002/anaconda3/lib/python3.8/site-packages/pybind11/include (found version "2.10.4")
+-- Found raisim: /home/lr-2002/code/raisimLib/raisim/linux/include  
+-- raisim:
+--   Version: 1.1.7
+--   Includes: /home/lr-2002/code/raisimLib/raisim/linux/include
+--   Libraries: raisim::raisimPng;raisim::raisimODE;raisim::raisimMine;raisim::raisim
+-- Found OGRE
+--   static     : OFF
+--   components : Bites;HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+--   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI;Codec_FreeImage;Codec_EXR
+--   media      : /home/lr-2002/code/raisimLib/raisim_build/share/OGRE/Media
+-- Found raisimOgre: /home/lr-2002/code/raisimLib/raisim_build/include  
+-- raisimOgre:
+--   Version: 0.7.0
+--   Includes: /home/lr-2002/code/raisimLib/raisim_build/include
+--   Libraries: OgreMain;OgreBites;OgreRTShaderSystem;OgreMeshLodGenerator;raisim::assimp;raisim::raisim;pthread;zzip;SDL2
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+[FLEXIBLE_ROBOT_RAISIM_GYM] including directory ./flex_gym/env/env/BlackPanther_V55
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lr-2002/code/High_Speed_Quadrupedal_Locomotion_by_IRRL/IRRL/FlexibleRobotRaisimGym/cmake-build-debug

@@ -61,4 +61,4 @@ environment:
   ObsNoise: 0.0
   CubeNum: 1
   FPS: 100.0
-  RefTraj: /home/wooden/raisim_workspace/raisimGym/scripts/data/2020-09-11 22_57_19_ref_traj.csv
+  RefTraj: /home/lr-2002/code/High_Speed_Quadrupedal_Locomotion_by_IRRL/Exp_Raw_Data/info_trot_m65_v25_f10.csv

@@ -1,4 +1,4 @@
-from raisim_gym.algo.ppo2 import PPO2
+from flex_gym.algo.ppo2 import PPO2
 import numpy as np
 import os
 

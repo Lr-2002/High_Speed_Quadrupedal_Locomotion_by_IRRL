@@ -18,8 +18,10 @@ import math
 import numpy as np
 import argparse
 import stable_baselines
-from stable_baselines.a2c.utils import conv, linear, conv_to_fc, batch_to_seq, seq_to_batch, lstm
-import tensorflow as tf
+from stable_baselines.common.tf_util import batch_to_seq, seq_to_batch
+from stable_baselines.common.tf_layers import conv, linear, conv_to_fc, lstm
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from termcolor import colored
 from math import floor
 
@@ -41,7 +43,7 @@ def parse_args(args):
                         default=os.path.abspath(
                             __RSCDIR__ + "/default_cfg.yaml"),
                         help='configuration file')
-    parser.add_argument("--max_iter", dest="max_iter", type=int, default=200000000,
+    parser.add_argument("--max_iter", dest="max_iter", type=int, default=200000,
                         help='max iteration for model training, for train mode')
     parser.add_argument("--save", dest="save_flag", type=bool, default=True,
                         help="true for save trained model and other files")
@@ -97,7 +99,7 @@ def parse_args(args):
                         help="save cmd and origin state data for dynamics analysis")
     parser.add_argument("--save_energy_data", type=str, default='NoSave',
                         help="save dynamics data for energy flow analysis")
-    parser.add_argument("--ref", action="store_true", default=False,
+    parser.add_argument("--ref", action="store_true", default=True,
                         help="get and save the reference joint trajectory from environment")
     parser.add_argument("--vid", action="store_true", default=False,
                         help="start record video")
@@ -199,6 +201,7 @@ def main(args):
 
     # load config file-
     cfg_abs_path = arg_parser.cfg
+    print("!!@#!@#@!", cfg_abs_path)
     cfg = YAML().load(open(cfg_abs_path, 'r'))
 
     # create environment from the configuration file

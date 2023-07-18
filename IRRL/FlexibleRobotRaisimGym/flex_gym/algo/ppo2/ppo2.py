@@ -11,7 +11,7 @@ from stable_baselines import logger
 from stable_baselines.common import explained_variance, ActorCriticRLModel, tf_util, SetVerbosity, TensorboardWriter
 from stable_baselines.common.runners import AbstractEnvRunner
 from flex_gym.archi.policies import LstmPolicy, ActorCriticPolicy
-from stable_baselines.a2c.utils import total_episode_reward_logger
+from stable_baselines.common.tf_util import total_episode_reward_logger
 from termcolor import colored
 
 
