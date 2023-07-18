@@ -2,7 +2,9 @@
 
 /.vscode/*
 /build/*
-
+/.idea/*
+/IRRL/data/*
 /IRRL/FlexibleRobotRaisimGym/build/*
+/IRRL/FlexibleRobotRaisimGym/cmake-build-debug/*
 /IRRL/FlexibleRobotRaisimGym/dist/*
 /IRRL/FlexibleRobotRaisimGym/FlexibleRobot.egg-info/*
